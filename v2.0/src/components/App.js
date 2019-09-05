@@ -1,9 +1,17 @@
 import React from "react";
 import "../stylesheets/App.scss";
-import header from "./Header";
+import Headerjs from "./Header";
+import Footer from "./Footer";
 
-function App() {
-  return <div className="App">{header}</div>;
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <Headerjs />
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default App;
