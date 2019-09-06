@@ -3,6 +3,7 @@ import "../stylesheets/App.scss";
 import Headerjs from "./Header";
 import Footer from "./Footer";
 import IndexMain from "./IndexMain";
+import Design from "./Design";
 
 class App extends React.Component {
   render() {
@@ -10,7 +11,9 @@ class App extends React.Component {
       <div>
         <IndexMain />
         <Footer />
+
         <Headerjs />
+        <Design />
       </div>
     );
   }

@@ -1,0 +1,20 @@
+.color-pallet {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-basis: 50%;
+  margin-bottom: 20px;
+
+  .color-btn {
+    margin-right: 10px;
+  }
+
+  &__colors {
+    display: flex;
+
+    &__box {
+      width: 30px;
+      height: 25px;
+    }
+  }
+}

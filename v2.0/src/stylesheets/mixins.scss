@@ -1,0 +1,26 @@
+@mixin paletBoxes($primary, $secondary, $tertiary) {
+  .box-1 {
+    background-color: $primary;
+  }
+  .box-2 {
+    background-color: $secondary;
+  }
+  .box-3 {
+    background-color: $tertiary;
+  }
+}
+
+@mixin personalize($primary, $secondary, $tertiary) {
+  .text--border {
+    border-left: 5px solid $secondary;
+  }
+
+  .name--color,
+  .icon {
+    color: $primary;
+  }
+
+  .border--color {
+    border-color: $tertiary;
+  }
+}
