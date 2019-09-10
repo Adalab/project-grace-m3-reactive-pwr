@@ -2,6 +2,7 @@ import React from "react";
 
 class Viewer extends React.Component {
   render() {
+    console.log(this.props.data);
     return (
       <section className="visualization">
         <form className="blue js-visualizationReset">
@@ -16,7 +17,9 @@ class Viewer extends React.Component {
             <div className="visualization__user">
               <div className="text__wrap text--border">
                 <h3 className="visualization__user__name name--color js-visualization-data">
-                  Nombre Apellido
+                  {this.props.data.name === ""
+                    ? "Nombre Apellido"
+                    : this.props.data.name}
                 </h3>
                 <p className="visualization__user__job js-visualization-data">
                   Front-end developer

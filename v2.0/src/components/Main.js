@@ -19,14 +19,25 @@ class Main extends React.Component {
       github: "",
       photo: ""
     };
+    this.updateState = this.updateState.bind(this);
   }
+
+  updateState(ev) {
+    console.log(this.state.name);
+    let inputName = ev.target.value;
+    this.setState({
+      name: inputName
+    });
+    console.log(this.state);
+  }
+
   render() {
     return (
       <main className="main">
-        <Viewer />
+        <Viewer data={this.state} />
         <section className="js-data__input responsive">
           <Design />
-          <Form />
+          <Form actionToForm={this.updateState} />
           <Share />
         </section>
       </main>
