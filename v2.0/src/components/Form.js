@@ -2,14 +2,44 @@ import React from "react";
 import "../stylesheets/form.scss";
 
 class Form extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      class: "hidden"
+    };
+    this.putHiddenClass = this.putHiddenClass.bind(this);
+    this.updateName = this.updateName.bind(this);
+  }
+  putHiddenClass() {
+    let nextState;
+    this.setState(prevState => {
+      if (prevState.class === "hidden") {
+        nextState = "";
+      } else {
+        nextState = "hidden";
+      }
+      return {
+        class: nextState
+      };
+    });
+  }
+
+  updateName(ev) {
+    let inputName = ev.target.value;
+    console.log(inputName);
+  }
+
   render() {
     return (
-      <section className="data js-collapse">
+      <section className={`data js-collapse ${this.state.class}`}>
         <div className="data__title">
           <h2 className="data__title__text home--title">
             <i className="data__title__text__icon far fa-keyboard"></i>Rellena
           </h2>
-          <button className="data__title__btn js-btn-collapse">
+          <button
+            className="data__title__btn js-btn-collapse"
+            onClick={this.putHiddenClass}
+          >
             <i className="fa fa-chevron-up"></i>
           </button>
         </div>
@@ -23,6 +53,7 @@ class Form extends React.Component {
               name="name"
               className="data__form-item js-form_name"
               placeholder="Ej: Sally Jill"
+              onChange={this.updateName}
             />
             <label for="job" className="data__form-label">
               Puesto
