@@ -2,7 +2,7 @@ import React from "react";
 
 class Viewer extends React.Component {
   render() {
-    console.log(this.props.data);
+    const resetForm = this.props.resetForm;
     return (
       <section className="visualization">
         <form className="blue js-visualizationReset">
@@ -10,6 +10,7 @@ class Viewer extends React.Component {
             <button
               className="visualization__reset home--subtitle js-reset"
               type="reset"
+              onClick={resetForm}
             >
               <i className="visualization__reset__icon far fa-trash-alt"></i>
               Reset
@@ -22,7 +23,9 @@ class Viewer extends React.Component {
                     : this.props.data.name}
                 </h3>
                 <p className="visualization__user__job js-visualization-data">
-                  Front-end developer
+                  {this.props.data.job === ""
+                    ? "Front-end developer"
+                    : this.props.data.job}
                 </p>
               </div>
               <div className="visualization__user__img"></div>
