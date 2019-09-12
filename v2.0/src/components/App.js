@@ -2,7 +2,7 @@ import React from "react";
 import "../stylesheets/App.scss";
 import "../stylesheets/home.scss";
 import "../stylesheets/typography.scss";
-import Headerjs from "./Header";
+import Header from "./Header";
 import Footer from "./Footer";
 import IndexMain from "./IndexMain";
 import Main from "./Main";
@@ -14,7 +14,7 @@ class App extends React.Component {
         <IndexMain />
         <Footer />
         <div className="page">
-          <Headerjs />
+          <Header />
           <Main />
           <Footer />
         </div>

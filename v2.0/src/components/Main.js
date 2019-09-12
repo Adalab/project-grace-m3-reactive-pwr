@@ -47,25 +47,15 @@ class Main extends React.Component {
 
   updateStateName(ev) {
     let inputName = ev.target.value;
-    this.setState(
-      {
-        name: inputName
-      },
-      () => {
-        this.saveDataToLocalStorage();
-      }
-    );
+    this.setState({
+      name: inputName
+    });
   }
   updateStateJob(ev) {
     let inputJob = ev.target.value;
-    this.setState(
-      {
-        job: inputJob
-      },
-      () => {
-        this.saveDataToLocalStorage();
-      }
-    );
+    this.setState({
+      job: inputJob
+    });
   }
   saveDataToLocalStorage() {
     localStorage.removeItem("data");
@@ -73,33 +63,26 @@ class Main extends React.Component {
   }
 
   resetForm() {
-    this.setState(
-      {
-        palette: 1,
-        name: "",
-        job: "",
-        phone: "",
-        email: "",
-        linkedin: "",
-        github: "",
-        photo: ""
-      },
-      () => {
-        this.saveDataToLocalStorage();
-      }
-    );
+    this.setState({
+      palette: 1,
+      name: "",
+      job: "",
+      phone: "",
+      email: "",
+      linkedin: "",
+      github: "",
+      photo: ""
+    });
   }
 
   render() {
+    this.saveDataToLocalStorage();
     return (
       <main className="main">
         <Viewer data={this.state} resetForm={this.resetForm} />
         <section className="js-data__input responsive">
           <Design />
-          <Form
-            actionToName={this.updateStateName}
-            actionToJob={this.updateStateJob}
-          />
+          <Form actionToName={this.updateStateName} actionToJob={this.updateStateJob} />
           <Share />
         </section>
       </main>

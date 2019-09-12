@@ -2,7 +2,7 @@ import React from "react";
 import logo from "../images/logo.svg";
 import "../stylesheets/header.scss";
 
-class Headerjs extends React.Component {
+class Header extends React.Component {
   render() {
     return (
       <header>
@@ -14,4 +14,4 @@ class Headerjs extends React.Component {
   }
 }
 
-export default Headerjs;
+export default Header;
