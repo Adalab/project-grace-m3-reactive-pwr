@@ -97,6 +97,7 @@ class Main extends React.Component {
         <section className="js-data__input responsive">
           <Design />
           <Form
+            data={this.state}
             actionToName={this.updateStateName}
             actionToJob={this.updateStateJob}
           />

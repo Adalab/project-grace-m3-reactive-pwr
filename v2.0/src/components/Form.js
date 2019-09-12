@@ -49,6 +49,7 @@ class Form extends React.Component {
               name="name"
               className="data__form-item js-form_name"
               placeholder="Ej: Sally Jill"
+              value={this.props.data.name}
               onChange={actionToName}
             />
             <label for="job" className="data__form-label">
