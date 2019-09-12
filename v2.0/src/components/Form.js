@@ -8,7 +8,6 @@ class Form extends React.Component {
       class: "hidden"
     };
     this.putHiddenClass = this.putHiddenClass.bind(this);
-    this.updateName = this.updateName.bind(this);
   }
   putHiddenClass() {
     let nextState;
@@ -24,12 +23,9 @@ class Form extends React.Component {
     });
   }
 
-  updateName(ev) {
-    let inputName = ev.target.value;
-    console.log(inputName);
-  }
-
   render() {
+    const actionToName = this.props.actionToName;
+    const actionToJob = this.props.actionToJob;
     return (
       <section className={`data js-collapse ${this.state.class}`}>
         <div className="data__title">
@@ -53,7 +49,7 @@ class Form extends React.Component {
               name="name"
               className="data__form-item js-form_name"
               placeholder="Ej: Sally Jill"
-              onChange={this.updateName}
+              onChange={actionToName}
             />
             <label for="job" className="data__form-label">
               Puesto
@@ -63,6 +59,7 @@ class Form extends React.Component {
               name="job"
               className="data__form-item js-form__job"
               placeholder="Ej: Front-end unicorn"
+              onChange={actionToJob}
             />
             <label for="user_image" className="data__form__image-label">
               Imagen de perfil
