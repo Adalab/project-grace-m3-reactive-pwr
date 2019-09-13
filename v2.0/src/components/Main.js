@@ -2,7 +2,7 @@ import React from "react";
 import Design from "./Design";
 import Form from "./Form";
 import Share from "./Share";
-import Viewer from "./viewer";
+import Viewer from "./Viewer";
 import "../stylesheets/home.scss";
 import "../stylesheets/main.scss";
 
@@ -82,7 +82,10 @@ class Main extends React.Component {
         <Viewer data={this.state} resetForm={this.resetForm} />
         <section className="js-data__input responsive">
           <Design />
-          <Form actionToName={this.updateStateName} actionToJob={this.updateStateJob} />
+          <Form
+            actionToName={this.updateStateName}
+            actionToJob={this.updateStateJob}
+          />
           <Share />
         </section>
       </main>

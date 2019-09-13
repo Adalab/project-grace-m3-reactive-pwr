@@ -1,4 +1,6 @@
 import React from "react";
+import ViewerImg from "./ViewerImg";
+import ViewerIcon from "./ViewerIcon";
 
 class Viewer extends React.Component {
   render() {
@@ -28,21 +30,8 @@ class Viewer extends React.Component {
                     : this.props.data.job}
                 </p>
               </div>
-              <div className="visualization__user__img"></div>
-              <ul className="visualization__user__icon-list">
-                <li className="icon-wrap border--color js-phone">
-                  <i className="icon fa fa-mobile-alt"></i>
-                </li>
-                <li className="icon-wrap border--color js-email">
-                  <i className="icon fa fa-envelope"></i>
-                </li>
-                <li className="icon-wrap border--color js-linkedin">
-                  <i className="icon fab fa-linkedin-in"></i>
-                </li>
-                <li className="icon-wrap border--color js-github">
-                  <i className="icon fab fa-github-alt"></i>
-                </li>
-              </ul>
+              <ViewerImg />
+              <ViewerIcon />
             </div>
           </div>
         </form>
