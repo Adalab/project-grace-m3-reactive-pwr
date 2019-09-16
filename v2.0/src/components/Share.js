@@ -6,17 +6,17 @@ class Share extends React.Component {
   constructor() {
     super();
     this.state = {
-      class: "hidden"
+      class: "collapsable"
     };
     this.putHiddenClass = this.putHiddenClass.bind(this);
   }
   putHiddenClass() {
     let nextState;
     this.setState(prevState => {
-      if (prevState.class === "hidden") {
+      if (prevState.class === "collapsable") {
         nextState = "";
       } else {
-        nextState = "hidden";
+        nextState = "collapsable";
       }
       return {
         class: nextState

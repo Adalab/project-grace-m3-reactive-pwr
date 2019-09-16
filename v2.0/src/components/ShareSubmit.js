@@ -3,9 +3,29 @@ import Twitter from "./Twitter";
 import "../stylesheets/share.scss";
 
 class Submit extends React.Component {
+  //   constructor(props) {
+  //     super(props);
+  //     this.state = {
+  //       class: "hidden"
+  //     };
+
+  //     this.handleHiddenClass = this.handleHiddenClass.bind(this);
+  //   }
+
+  //   handleHiddenClass() {
+  //     let nextState;
+  //     this.setState(prevState => {
+  //       if (prevState.class === "hidden") {
+  //         nextState = "";
+  //       }
+  //       return {
+  //         class: nextState
+  //       };
+  //     });
+  //   }
   render() {
     return (
-      <div>
+      <React.Fragment>
         <div className="share__createcard__btn collapse">
           <button
             className="share__createcard__btn__title js-saveLocalStorage"
@@ -16,7 +36,7 @@ class Submit extends React.Component {
           </button>
         </div>
         <Twitter />
-      </div>
+      </React.Fragment>
     );
   }
 }
