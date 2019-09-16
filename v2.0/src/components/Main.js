@@ -2,7 +2,7 @@ import React from "react";
 import Design from "./Design";
 import Form from "./Form";
 import Share from "./Share";
-import Viewer from "./Viewer";
+import Viewer from "./viewer";
 import "../stylesheets/home.scss";
 import "../stylesheets/main.scss";
 
@@ -16,7 +16,7 @@ class Main extends React.Component {
   constructor() {
     super();
     this.state = {
-      palette: 1,
+      palette: !savedData ? "" : savedData.palette,
       name: !savedData ? "" : savedData.name,
       job: !savedData ? "" : savedData.job,
       phone: "",
