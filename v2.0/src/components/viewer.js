@@ -4,9 +4,26 @@ import ViewerIcon from "./ViewerIcon";
 
 class Viewer extends React.Component {
   render() {
+    let palette = this.props.data.palette;
+    let className;
+    const changeClass = () => {
+      if (palette === "1") {
+        className = "blue";
+      } else if (palette === "2") {
+        className = "red";
+      } else if (palette === "3") {
+        className = "yell";
+      } else if (palette === "4") {
+        className = "gre";
+      } else if (palette === "5") {
+        className = "pur";
+      }
+      return className;
+    };
+
     const resetForm = this.props.resetForm;
     return (
-      <section className="visualization">
+      <section className={`visualization ${changeClass()}`}>
         <form className="blue js-visualizationReset">
           <div className="visualization__wrap">
             <button

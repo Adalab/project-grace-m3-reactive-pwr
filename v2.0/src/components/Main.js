@@ -26,24 +26,8 @@ class Main extends React.Component {
       photo: ""
     };
     this.updateForm = this.updateForm.bind(this);
-    this.updateStateName = this.updateStateName.bind(this);
-    this.updateStateJob = this.updateStateJob.bind(this);
     this.saveDataToLocalStorage = this.saveDataToLocalStorage.bind(this);
-    this.updateFromLocalStorage = this.updateFromLocalStorage.bind(this);
     this.resetForm = this.resetForm.bind(this);
-  }
-
-  updateFromLocalStorage() {
-    this.setState({
-      palette: 1,
-      name: savedData.name,
-      job: "",
-      phone: "",
-      email: "",
-      linkedin: "",
-      github: "",
-      photo: ""
-    });
   }
 
   updateForm(ev) {
@@ -52,18 +36,6 @@ class Main extends React.Component {
     });
   }
 
-  updateStateName(ev) {
-    let inputName = ev.target.value;
-    this.setState({
-      name: inputName
-    });
-  }
-  updateStateJob(ev) {
-    let inputJob = ev.target.value;
-    this.setState({
-      job: inputJob
-    });
-  }
   saveDataToLocalStorage() {
     localStorage.removeItem("data");
     localStorage.setItem("data", JSON.stringify(this.state));
@@ -89,11 +61,7 @@ class Main extends React.Component {
         <Viewer data={this.state} resetForm={this.resetForm} />
         <section className="js-data__input responsive">
           <Design actionToForm={this.updateForm} />
-          <Form
-            actionToForm={this.updateForm}
-            actionToName={this.updateStateName}
-            actionToJob={this.updateStateJob}
-          />
+          <Form actionToForm={this.updateForm} />
           <Share />
         </section>
       </main>

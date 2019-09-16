@@ -1,4 +1,15 @@
 @import "./variables.scss";
+@import "./reset";
+@import "./mixins";
+@import "./typography";
+@import "./header";
+@import "./main";
+@import "./design";
+@import "./colors";
+@import "./personalitation";
+@import "./footer";
+@import "./form";
+@import "./share";
 
 .main {
   background-color: $colorBackground;
