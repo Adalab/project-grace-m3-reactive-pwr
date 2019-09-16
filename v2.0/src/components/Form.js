@@ -41,7 +41,7 @@ class Form extends React.Component {
         </div>
         <div className="data__form--wrapper collapse">
           <div action="" className="data__form" method="POST">
-            <label for="name" className="data__form-label">
+            <label htmlFor="name" className="data__form-label">
               Nombre completo
             </label>
             <input
@@ -51,7 +51,7 @@ class Form extends React.Component {
               placeholder="Ej: Sally Jill"
               onChange={actionToName}
             />
-            <label for="job" className="data__form-label">
+            <label htmlFor="job" className="data__form-label">
               Puesto
             </label>
             <input
@@ -61,17 +61,17 @@ class Form extends React.Component {
               placeholder="Ej: Front-end unicorn"
               onChange={actionToJob}
             />
-            <label for="user_image" className="data__form__image-label">
+            <label htmlFor="user_image" className="data__form__image-label">
               Imagen de perfil
             </label>
             <div className="data__form__image">
-              <label for="photo" className="data__form__image-button">
+              <label htmlFor="photo" className="data__form__image-button">
                 Añadir imagen
                 <input type="file" id="photo" />
               </label>
               <div className="data__form__image-thumbnail"></div>
             </div>
-            <label for="email" className="data__form-label">
+            <label htmlFor="email" className="data__form-label">
               Email
             </label>
             <input
@@ -80,7 +80,7 @@ class Form extends React.Component {
               className="data__form-item js-link_email"
               placeholder="Ej: adalab@gmail.com"
             />
-            <label for="job" className="data__form-label">
+            <label htmlFor="job" className="data__form-label">
               Teléfono
             </label>
             <input
@@ -89,7 +89,7 @@ class Form extends React.Component {
               className="data__form-item js-link_phone"
               placeholder="Ej: 632-54-12-36"
             />
-            <label for="linkedin" className="data__form-label">
+            <label htmlFor="linkedin" className="data__form-label">
               LinkedIn
             </label>
             <input
@@ -98,7 +98,7 @@ class Form extends React.Component {
               className="data__form-item js-link_linkedin"
               placeholder="Ej: sally.hill"
             />
-            <label for="github" className="data__form-label">
+            <label htmlFor="github" className="data__form-label">
               GitHub
             </label>
             <span className="data__form-before">@</span>
