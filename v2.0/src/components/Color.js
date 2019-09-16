@@ -11,13 +11,14 @@ class Colors extends React.Component {
       >
         <input
           type="radio"
-          name="radio"
-          id={`radio${this.props.inputvalue}`}
+          name="palette"
+          id={`palette${this.props.inputvalue}`}
           className="color-btn js-palett-btn"
           value={this.props.inputvalue}
+          onClick={this.props.actionToForm}
         />
         <label
-          htmlFor={`radio${this.props.inputvalue}`}
+          htmlFor={`palette${this.props.inputvalue}`}
           className="color-pallet__colors "
         >
           <div className="color-pallet__colors__box box-1"></div>

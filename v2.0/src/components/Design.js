@@ -41,11 +41,36 @@ class Design extends React.Component {
         <div className="design__colors collapse">
           <p className="design__colors__text home--subtitle">Colores</p>
           <div className="design__colors__choose js-palett-choose">
-            <Colors colorClass="blue" id="blue" inputvalue="1" />
-            <Colors colorClass="red" id="red" inputvalue="2" />
-            <Colors colorClass="yell" id="yell" inputvalue="3" />
-            <Colors colorClass="gre" id="gre" inputvalue="4" />
-            <Colors colorClass="pur" id="pur" inputvalue="5" />
+            <Colors
+              colorClass="blue"
+              id="blue"
+              inputvalue="1"
+              actionToForm={this.props.actionToForm}
+            />
+            <Colors
+              colorClass="red"
+              id="red"
+              inputvalue="2"
+              actionToForm={this.props.actionToForm}
+            />
+            <Colors
+              colorClass="yell"
+              id="yell"
+              inputvalue="3"
+              actionToForm={this.props.actionToForm}
+            />
+            <Colors
+              colorClass="gre"
+              id="gre"
+              inputvalue="4"
+              actionToForm={this.props.actionToForm}
+            />
+            <Colors
+              colorClass="pur"
+              id="pur"
+              inputvalue="5"
+              actionToForm={this.props.actionToForm}
+            />
           </div>
         </div>
       </section>

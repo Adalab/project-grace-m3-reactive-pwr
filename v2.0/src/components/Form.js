@@ -24,6 +24,7 @@ class Form extends React.Component {
   }
 
   render() {
+    const actionToForm = this.props.actionToForm;
     const actionToName = this.props.actionToName;
     const actionToJob = this.props.actionToJob;
     return (
@@ -49,7 +50,7 @@ class Form extends React.Component {
               name="name"
               className="data__form-item js-form_name"
               placeholder="Ej: Sally Jill"
-              onChange={actionToName}
+              onChange={actionToForm}
             />
             <label htmlFor="job" className="data__form-label">
               Puesto
@@ -59,7 +60,7 @@ class Form extends React.Component {
               name="job"
               className="data__form-item js-form__job"
               placeholder="Ej: Front-end unicorn"
-              onChange={actionToJob}
+              onChange={actionToForm}
             />
             <label htmlFor="user_image" className="data__form__image-label">
               Imagen de perfil

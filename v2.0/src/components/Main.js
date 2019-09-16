@@ -25,6 +25,7 @@ class Main extends React.Component {
       github: "",
       photo: ""
     };
+    this.updateForm = this.updateForm.bind(this);
     this.updateStateName = this.updateStateName.bind(this);
     this.updateStateJob = this.updateStateJob.bind(this);
     this.saveDataToLocalStorage = this.saveDataToLocalStorage.bind(this);
@@ -42,6 +43,12 @@ class Main extends React.Component {
       linkedin: "",
       github: "",
       photo: ""
+    });
+  }
+
+  updateForm(ev) {
+    this.setState({
+      [ev.target.name]: ev.target.value
     });
   }
 
@@ -81,8 +88,9 @@ class Main extends React.Component {
       <main className="main">
         <Viewer data={this.state} resetForm={this.resetForm} />
         <section className="js-data__input responsive">
-          <Design />
+          <Design actionToForm={this.updateForm} />
           <Form
+            actionToForm={this.updateForm}
             actionToName={this.updateStateName}
             actionToJob={this.updateStateJob}
           />
