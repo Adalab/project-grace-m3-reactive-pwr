@@ -19,10 +19,10 @@ class Main extends React.Component {
       palette: !savedData ? "" : savedData.palette,
       name: !savedData ? "" : savedData.name,
       job: !savedData ? "" : savedData.job,
-      phone: "",
-      email: "",
-      linkedin: "",
-      github: "",
+      phone: !savedData ? "" : savedData.phone,
+      email: !savedData ? "" : savedData.email,
+      linkedin: !savedData ? "" : savedData.linkedin,
+      github: !savedData ? "" : savedData.github,
       photo: ""
     };
     this.updateForm = this.updateForm.bind(this);
