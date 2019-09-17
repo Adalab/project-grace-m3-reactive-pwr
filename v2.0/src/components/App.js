@@ -1,24 +1,21 @@
 import React from "react";
+import { Route, Switch } from "react-router-dom";
 import "../stylesheets/App.scss";
 import "../stylesheets/home.scss";
 import "../stylesheets/typography.scss";
-import Header from "./Header";
-import Footer from "./Footer";
-import IndexMain from "./IndexMain";
-import Main from "./Main";
+import Landing from "./Landing";
+import Home from "./Home";
 
 class App extends React.Component {
   render() {
     return (
-      <div>
-        <IndexMain />
-        <Footer />
-        <div className="page">
-          <Header />
-          <Main />
-          <Footer />
-        </div>
-      </div>
+      <React.Fragment>
+        <Switch>
+          <Route exact path="/" component={Landing} />
+          <Route path="/home" component={Home} />
+          <Route path="/landing" component={Landing} />
+        </Switch>
+      </React.Fragment>
     );
   }
 }

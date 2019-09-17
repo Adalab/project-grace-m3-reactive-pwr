@@ -31,46 +31,18 @@ class Design extends React.Component {
           <h2 className="design__title__text home--title">
             <i className="design__title__icon far fa-object-ungroup"></i>Diseña
           </h2>
-          <button
-            className="design__title__btn js-btn-collapse"
-            onClick={this.putHiddenClass}
-          >
+          <button className="design__title__btn js-btn-collapse" onClick={this.putHiddenClass}>
             <i className="fa fa-chevron-up icon"></i>
           </button>
         </div>
         <div className="design__colors collapse">
           <p className="design__colors__text home--subtitle">Colores</p>
           <div className="design__colors__choose js-palett-choose">
-            <Colors
-              colorClass="blue"
-              id="blue"
-              inputvalue="1"
-              actionToForm={this.props.actionToForm}
-            />
-            <Colors
-              colorClass="red"
-              id="red"
-              inputvalue="2"
-              actionToForm={this.props.actionToForm}
-            />
-            <Colors
-              colorClass="yell"
-              id="yell"
-              inputvalue="3"
-              actionToForm={this.props.actionToForm}
-            />
-            <Colors
-              colorClass="gre"
-              id="gre"
-              inputvalue="4"
-              actionToForm={this.props.actionToForm}
-            />
-            <Colors
-              colorClass="pur"
-              id="pur"
-              inputvalue="5"
-              actionToForm={this.props.actionToForm}
-            />
+            <Colors colorClass="blue" id="blue" inputvalue="1" data={this.props.data} actionToForm={this.props.actionToForm} />
+            <Colors colorClass="red" id="red" inputvalue="2" data={this.props.data} actionToForm={this.props.actionToForm} />
+            <Colors colorClass="yell" id="yell" inputvalue="3" data={this.props.data} actionToForm={this.props.actionToForm} />
+            <Colors colorClass="gre" id="gre" inputvalue="4" data={this.props.data} actionToForm={this.props.actionToForm} />
+            <Colors colorClass="pur" id="pur" inputvalue="5" data={this.props.data} actionToForm={this.props.actionToForm} />
           </div>
         </div>
       </section>
