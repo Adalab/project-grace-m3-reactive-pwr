@@ -43,7 +43,7 @@ class Main extends React.Component {
 
   resetForm() {
     this.setState({
-      palette: 1,
+      palette: "1",
       name: "",
       job: "",
       phone: "",

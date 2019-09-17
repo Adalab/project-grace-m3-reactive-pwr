@@ -13,7 +13,7 @@ class Footer extends React.Component {
           <img className="footer_container_logo" src={logoDebugger} alt="logo del equipo Debugger" />
         </div>
         <div>
-          <a href="index.html#index_page" className="footer_anchor">
+          <a href="https://adalab.es/" className="footer_anchor" target="_blank" rel="noopener noreferrer">
             {" "}
             <img src={logoAdalab} alt="Logo de Adalab. Volver al home." className="footer_logo" />
           </a>
