@@ -26,19 +26,3 @@
     margin-top: 30px;
   }
 }
-
-.design.hidden {
-  padding: 30px 0 7px;
-
-  .design__title {
-    margin: 0;
-
-    &__btn {
-      transform: rotateX(180deg);
-    }
-  }
-  .collapse {
-    display: none;
-    transition: 0.5s ease display;
-  }
-}
