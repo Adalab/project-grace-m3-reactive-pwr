@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../images/logo.svg";
 import "../stylesheets/indexMain.scss";
+import { Link } from "react-router-dom";
 
 class IndexMain extends React.Component {
   render() {
@@ -27,9 +28,11 @@ class IndexMain extends React.Component {
             </li>
           </ul>
         </nav>
-        <button className="layout-page__button" type="button">
-          COMENZAR
-        </button>
+        <Link to="/home">
+          <button className="layout-page__button" type="button">
+            COMENZAR
+          </button>
+        </Link>
       </main>
     );
   }

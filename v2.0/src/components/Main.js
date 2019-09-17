@@ -60,8 +60,8 @@ class Main extends React.Component {
       <main className="main">
         <Viewer data={this.state} resetForm={this.resetForm} />
         <section className="js-data__input responsive">
-          <Design actionToForm={this.updateForm} />
-          <Form actionToForm={this.updateForm} />
+          <Design data={this.state} actionToForm={this.updateForm} />
+          <Form data={this.state} actionToForm={this.updateForm} />
           <Share />
         </section>
       </main>
