@@ -28,6 +28,23 @@ class Main extends React.Component {
     this.updateForm = this.updateForm.bind(this);
     this.saveDataToLocalStorage = this.saveDataToLocalStorage.bind(this);
     this.resetForm = this.resetForm.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+    this.fileInput = React.createRef();
+    this.fr = new FileReader();
+    this.getImage = this.getImage.bind(this);
+  }
+
+  handleSubmit(e) {
+    const myFile = e.currentTarget.files[0];
+    this.fr.addEventListener("load", this.getImage);
+    this.fr.readAsDataURL(myFile);
+  }
+
+  getImage() {
+    const image = this.fr.result;
+    this.setState({
+      photo: image
+    });
   }
 
   updateForm(ev) {
@@ -61,7 +78,12 @@ class Main extends React.Component {
         <Viewer data={this.state} resetForm={this.resetForm} />
         <section className="js-data__input responsive">
           <Design data={this.state} actionToForm={this.updateForm} />
-          <Form data={this.state} actionToForm={this.updateForm} />
+          <Form
+            data={this.state}
+            actionToForm={this.updateForm}
+            handleSubmit={this.handleSubmit}
+            fileInput={this.fileInput}
+          />
           <Share />
         </section>
       </main>
