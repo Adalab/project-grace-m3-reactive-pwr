@@ -28,14 +28,11 @@ class Form extends React.Component {
     const actionToForm = this.props.actionToForm;
     return (
       <section className={`data js-collapse ${this.state.class}`}>
-        <div className="data__title">
+        <div className="data__title" onClick={this.putHiddenClass}>
           <h2 className="data__title__text home--title">
             <i className="data__title__text__icon far fa-keyboard"></i>Rellena
           </h2>
-          <button
-            className="data__title__btn js-btn-collapse"
-            onClick={this.putHiddenClass}
-          >
+          <button className="data__title__btn js-btn-collapse">
             <i className="fa fa-chevron-up"></i>
           </button>
         </div>
