@@ -10,11 +10,11 @@ function getDataFromLocalStorage() {
   let object = localStorage.getItem("data");
   return JSON.parse(object);
 }
-const savedData = getDataFromLocalStorage();
 
 class Main extends React.Component {
   constructor() {
     super();
+    const savedData = getDataFromLocalStorage();
     this.state = {
       palette: !savedData ? "" : savedData.palette,
       name: !savedData ? "" : savedData.name,
