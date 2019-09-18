@@ -8,8 +8,12 @@ class Header extends React.Component {
     return (
       <header>
         <div className="header__container">
-          <Link to="/landing">
-            <img className="header__container__image" src={logo} alt="Bienvenido a Awesome profile-cards" />
+          <Link to="/">
+            <img
+              className="header__container__image"
+              src={logo}
+              alt="Bienvenido a Awesome profile-cards"
+            />
           </Link>
         </div>
       </header>

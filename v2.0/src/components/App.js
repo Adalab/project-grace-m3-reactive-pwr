@@ -13,7 +13,6 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={Landing} />
           <Route path="/home" component={Home} />
-          <Route path="/landing" component={Landing} />
         </Switch>
       </React.Fragment>
     );
