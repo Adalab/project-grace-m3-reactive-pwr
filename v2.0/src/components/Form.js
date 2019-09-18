@@ -48,6 +48,7 @@ class Form extends React.Component {
               placeholder="Ej: Sally Jill"
               value={this.props.data.name}
               onChange={actionToForm}
+              required
             />
             <label htmlFor="job" className="data__form-label">
               Puesto
@@ -59,6 +60,7 @@ class Form extends React.Component {
               placeholder="Ej: Front-end unicorn"
               value={this.props.data.job}
               onChange={actionToForm}
+              required
             />
             <FileImage
               data={this.props.data}
@@ -75,6 +77,7 @@ class Form extends React.Component {
               placeholder="Ej: adalab@gmail.com"
               value={this.props.data.email}
               onChange={actionToForm}
+              required
             />
             <label htmlFor="job" className="data__form-label">
               Teléfono
@@ -86,6 +89,7 @@ class Form extends React.Component {
               placeholder="Ej: 632-54-12-36"
               value={this.props.data.phone}
               onChange={actionToForm}
+              required
             />
             <label htmlFor="linkedin" className="data__form-label">
               LinkedIn
@@ -97,6 +101,7 @@ class Form extends React.Component {
               placeholder="Ej: sally.hill"
               value={this.props.data.linkedin}
               onChange={actionToForm}
+              required
             />
             <label htmlFor="github" className="data__form-label">
               GitHub
@@ -109,6 +114,7 @@ class Form extends React.Component {
               placeholder="Ej: sallyHill"
               value={this.props.data.github}
               onChange={actionToForm}
+              required
             />
           </div>
         </div>

@@ -76,7 +76,8 @@ class Main extends React.Component {
     return (
       <main className="main">
         <Viewer data={this.state} resetForm={this.resetForm} />
-        <section className="js-data__input responsive">
+
+        <form className="js-data__input responsive">
           <Design data={this.state} actionToForm={this.updateForm} />
           <Form
             data={this.state}
@@ -85,7 +86,7 @@ class Main extends React.Component {
             fileInput={this.fileInput}
           />
           <Share />
-        </section>
+        </form>
       </main>
     );
   }

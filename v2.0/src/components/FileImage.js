@@ -6,7 +6,7 @@ class FileImage extends React.Component {
     return (
       <React.Fragment>
         <label htmlFor="user_image" className="data__form__image-label">
-          Imagen de perfil
+          Imagen de perfil *
         </label>
         <div className="data__form__image">
           <label htmlFor="photo" className="data__form__image-button">
@@ -16,6 +16,7 @@ class FileImage extends React.Component {
               id="photo"
               ref={this.props.fileInput}
               onChange={this.props.handleSubmit}
+              required
             />
           </label>
           <div
