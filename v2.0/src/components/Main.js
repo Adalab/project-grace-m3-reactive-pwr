@@ -23,7 +23,7 @@ class Main extends React.Component {
       email: !savedData ? "" : savedData.email,
       linkedin: !savedData ? "" : savedData.linkedin,
       github: !savedData ? "" : savedData.github,
-      photo: ""
+      photo: !savedData ? "" : savedData.photo
     };
     this.updateForm = this.updateForm.bind(this);
     this.saveDataToLocalStorage = this.saveDataToLocalStorage.bind(this);
