@@ -10,7 +10,7 @@ import Main from "./Main";
 class App extends React.Component {
   render() {
     return (
-      <div>
+      <React.Fragment>
         <IndexMain />
         <Footer />
         <div className="page">
@@ -18,7 +18,7 @@ class App extends React.Component {
           <Main />
           <Footer />
         </div>
-      </div>
+      </React.Fragment>
     );
   }
 }
