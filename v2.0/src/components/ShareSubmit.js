@@ -2,7 +2,7 @@ import React from "react";
 import Twitter from "./Twitter";
 import "../stylesheets/share.scss";
 
-class Submit extends React.Component {
+class ShareSubmit extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -35,4 +35,4 @@ class Submit extends React.Component {
   }
 }
 
-export default Submit;
+export default ShareSubmit;
