@@ -11,10 +11,11 @@ function getDataFromLocalStorage() {
   return JSON.parse(object);
 }
 
+let savedData = {};
 class Main extends React.Component {
   constructor() {
     super();
-    const savedData = getDataFromLocalStorage();
+    savedData = getDataFromLocalStorage();
     this.state = {
       palette: !savedData ? "" : savedData.palette,
       name: !savedData ? "" : savedData.name,
@@ -85,7 +86,7 @@ class Main extends React.Component {
             handleSubmit={this.handleSubmit}
             fileInput={this.fileInput}
           />
-          <Share />
+          <Share savedData={this.state} />
         </form>
       </main>
     );
