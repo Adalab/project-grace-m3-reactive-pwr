@@ -23,6 +23,17 @@
   max-width: 280px;
   margin: auto;
   border-bottom: 1px solid $colorBorderBottom;
+  transition: all 1s;
+
+  &:hover .design__title__btn {
+    color: #e17334;
+    font-size: 20px;
+  }
+
+  &:hover .design__title__text {
+    color: #e17334;
+    font-size: 19px;
+  }
 
   @media all and (min-width: $mediaTablet) {
     max-width: 329px;
@@ -45,6 +56,14 @@
     &__btn {
       font-size: 18px;
       color: $colorHomeText;
+      animation-duration: 0.75s;
+      animation-timing-function: ease-out;
+      transition: transform 1s;
+      &:hover {
+        transform: translateZ(0);
+        transform: translateY(-6px);
+        transform: translateY(0);
+      }
     }
   }
 

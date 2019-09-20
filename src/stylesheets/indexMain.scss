@@ -93,8 +93,17 @@ body {
     font-weight: 400;
     font-size: 16px;
     margin-bottom: 30px;
+    transition: all 1s;
     &:focus {
       border: 2px $colorButton solid;
+    }
+    &:hover {
+      animation: halftone 2s forwards;
+      background: radial-gradient(circle, #e17334 0.2em, transparent 0.25em) 0 0 /
+          1.25em 1.25em,
+        radial-gradient(circle, #e17334 0.2em, transparent 0.25em) 6.25em 6.25em /
+          1.25em 1.25em;
+      color: white;
     }
     @media all and (min-width: $mediaTablet) {
       width: 130px;

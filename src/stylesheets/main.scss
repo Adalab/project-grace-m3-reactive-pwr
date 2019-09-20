@@ -35,10 +35,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 1s;
+
     &__icon {
       color: $colorWhite;
       font-size: 15px;
+      transition: all 1s;
       // padding: 5px;
+    }
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.8);
+      color: black;
+    }
+
+    &:hover .visualization__reset__icon {
+      color: black;
     }
   }
 

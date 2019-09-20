@@ -7,8 +7,19 @@
   border-bottom: 1px solid $colorBorderBottom;
   display: flex;
   flex-direction: column;
+  transition: all 1s;
   @media all and (min-width: $mediaTablet) {
     max-width: 329px;
+  }
+
+  &:hover .share__title__btn {
+    color: #e17334;
+    font-size: 20px;
+  }
+
+  &:hover .share__title__text {
+    color: #e17334;
+    font-size: 19px;
   }
 
   &__title {
@@ -25,6 +36,14 @@
     &__btn {
       font-size: 18px;
       color: $colorHomeText;
+      animation-duration: 0.75s;
+      animation-timing-function: ease-out;
+      transition: transform 1s;
+      &:hover {
+        transform: translateZ(0);
+        transform: translateY(-6px);
+        transform: translateY(0);
+      }
     }
   }
   &__createcard__btn {
@@ -47,6 +66,16 @@
       text-transform: uppercase;
       padding: 13px 18px 13px 51px;
       margin-bottom: 30px;
+      transition: all 1s;
+
+      &:hover {
+        animation: halftone 2s forwards;
+        background: radial-gradient(circle, #438792 0.2em, transparent 0.25em) 0
+            0 / 1.25em 1.25em,
+          radial-gradient(circle, #438792 0.2em, transparent 0.25em) 6.25em
+            6.25em / 1.25em 1.25em;
+        color: white;
+      }
 
       &:disabled {
         background-color: grey;
@@ -86,6 +115,19 @@
       line-height: 1.43;
       padding: 3px 9px 7px 38px;
       margin: auto;
+      transition: all 2s;
+
+      &:hover {
+        animation: halftone 2s forwards;
+        background: radial-gradient(circle, #e17334 0.2em, transparent 0.25em) 0
+            0 / 1.25em 1.25em,
+          radial-gradient(circle, #e17334 0.2em, transparent 0.25em) 6.25em
+            6.25em / 1.25em 1.25em;
+        color: white;
+        font-size: 16px;
+        width: 200px;
+      }
+
       .sharetwitter {
         text-decoration: none;
         color: $colorWhite;
@@ -131,4 +173,10 @@
 
 .hidden {
   display: none; // tarjeta creada
+}
+
+@keyframes halftone {
+  100% {
+    background-size: 2.375em 2.375em, 0.1em 0.1em;
+  }
 }
